@@ -94,12 +94,13 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30,
     color: colors.black,
-    marginBottom:15,
+    marginBottom: 15,
+    flexDirection: "row",
   },
   input: {
     width: "100%",
     paddingLeft: 10,
-    color: colors.black,
+    color: colors.white,
     fontWeight: "500",
     fontSize: 17,
     flex: 1,
@@ -107,5 +108,6 @@ const styles = StyleSheet.create({
   icon: {
     alignSelf: "center",
     fontWeight: "500",
+    marginRight: 5,
   },
 });

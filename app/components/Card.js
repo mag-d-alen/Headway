@@ -31,9 +31,12 @@ function Card({
   const [isDisliked, setIsDisliked] = useState(false);
   const [likesCount, setLikesCount] = useState(0);
 
-  useEffect(()=>{
-    count<-4 && axios.post(`${environment.baseUrl}/delete-complain`, {id});
-  }, [])
+  useEffect(() => {
+    if (count < -4)
+      axios
+        .post(`${environment.baseUrl}/delete-complain`, { id })
+        .catch((e) => console.log(e));
+  }, [count]);
   useEffect(() => {
     typeof count === "number" && count === count && setLikesCount(count);
   }, [count]);
@@ -118,7 +121,9 @@ function Card({
           <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>
             <TouchableOpacity style={{ marginRight: 8 }} onPress={handleLike}>
               <View style={{ flexDirection: "row" }}>
-                <Text style={{ color: "#4838AD", fontSize: 18 }}>{` ${likesCount}  `}</Text>
+                <Text
+                  style={{ color: "#4838AD", fontSize: 18 }}
+                >{` ${likesCount}  `}</Text>
                 <MaterialCommunityIcons
                   name="heart"
                   color="rgb(254,40,105)"
