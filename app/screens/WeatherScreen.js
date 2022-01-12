@@ -29,8 +29,8 @@ export default function WeatherScreen({ navigation }) {
   const { location } = useLocation();
   const [currentDate, setCurrentDate] = useState("");
 
-  const fetchWeather = async (lat, long) => {
-    await fetch(
+  const fetchWeather = (lat, long) => {
+    fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=ee674281ee3c34d6364f35e597682a6c&units=metric`
     )
       .then((res) => res.json())
