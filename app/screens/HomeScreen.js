@@ -216,7 +216,7 @@ export default function HomeScreen({ navigation }) {
       )}
       {!loading && !feed.length && (
         <View style={{ justifyContent: "center" }}>
-          <Text style={{ color: "white" }}>No complains :)</Text>
+          <Text style={{ color: "white" }}>Fetching complaints</Text>
         </View>
       )}
     </Screen>
