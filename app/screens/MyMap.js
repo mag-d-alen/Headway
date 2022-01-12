@@ -139,6 +139,7 @@ export default function MyMap({ navigation }) {
             >
               <Timer style={{ marginBottom: 10 }} timer={timer} />
               <AppText style={{ paddingTop: 10 }}>
+                {/* {console.log(distanceTravelled)} */}
                 DistanceTraveled {parseFloat(distanceTravelled).toFixed(2)}
               </AppText>
             </View>
