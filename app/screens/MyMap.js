@@ -232,24 +232,24 @@ export default function MyMap({ navigation }) {
             const { _id, latitude, issueName, remarks, longitude } = mark;
             let markerColor;
             switch (issueName) {
-              case "Violent Animals Issue":
+              case "Violent Animals":
                 markerColor = "green";
                 break;
-              case "Street Light Outage Issue":
+              case "Street Light Outage":
                 markerColor = "yellow";
-              case "Pavement Issue":
+              case "Pavement ":
                 markerColor = "tomato";
                 break;
-              case "Illegal Parking Issue":
+              case "Illegal Parking":
                 markerColor = "wheat";
                 break;
-              case "Sewage Issue":
+              case "Sewage":
                 markerColor = "orange";
                 break;
-              case "Pothole Issue":
+              case "Pothole":
                 markerColor = "indigo";
                 break;
-              case "Garbage Issue":
+              case "Garbage":
                 markerColor = "teal";
                 break;
               default:

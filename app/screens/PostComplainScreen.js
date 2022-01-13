@@ -38,13 +38,13 @@ export default function PostComplainScreen({ navigation }) {
   const [anonymous, setAnonymous] = useState(false);
   const [gallery, setGallery] = useState(false);
   const [category, setCategory] = useState([
-    { name: "Pothole Issue", id: 1 },
-    { name: "Pavement issue", id: 2 },
-    { name: "Sewage Issue", id: 3 },
-    { name: "Garbage Issue", id: 4 },
-    { name: "Street Light Outage Issue", id: 5 },
-    { name: "Illegal Parking Issue", id: 6 },
-    { name: "Violent Animals Issue", id: 7 },
+    { name: "Pothole", id: 1 },
+    { name: "Pavement", id: 2 },
+    { name: "Sewage", id: 3 },
+    { name: "Garbage", id: 4 },
+    { name: "Street Light Outage", id: 5 },
+    { name: "Illegal Parking", id: 6 },
+    { name: "Violent Animals", id: 7 },
   ]);
   const { location, fetching } = useLocation();
   const { coords, setCoords, change, setChange } = useContext(AuthContext);
