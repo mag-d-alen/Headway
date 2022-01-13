@@ -137,24 +137,33 @@ export default function MyMap({ navigation }) {
                 flexDirection: "column",
               }}
             >
-              <Timer style={{ marginBottom: 10 }} timer={timer} />
-              <AppText style={{ paddingTop: 10 }}>
-                {/* {console.log(distanceTravelled)} */}
-                DistanceTraveled {parseFloat(distanceTravelled).toFixed(2)}
+              <Timer timer={timer} />
+              <AppText
+                style={{
+                  color: "white",
+                  fontSize: 20,
+                  paddingTop: 5,
+                  marginBottom: 12,
+                }}
+              >
+                {parseFloat(distanceTravelled).toFixed(2)}km
               </AppText>
             </View>
           )}
           {!track ? (
-            <MaterialCommunityIcons
-              name="play"
-              color={"white"}
-              size={50}
-              style={styles.tracingButton}
-              onTouchEnd={(e) => {
-                e.stopPropagation();
-              }}
-              onPress={() => handleTrackOn()}
-            />
+            <>
+              <Text style={{color: "white", fontSize: 20, letterSpacing:2,}}>MAP</Text>
+              <MaterialCommunityIcons
+                name="play"
+                color={"white"}
+                size={50}
+                style={styles.tracingButton}
+                onTouchEnd={(e) => {
+                  e.stopPropagation();
+                }}
+                onPress={() => handleTrackOn()}
+              />
+            </>
           ) : (
             <>
               <React.Fragment>
@@ -173,7 +182,7 @@ export default function MyMap({ navigation }) {
                   name="plus"
                   color={"white"}
                   size={50}
-                  style={styles.tracingButton}
+                  style={styles.stopButton}
                   onTouchEnd={(e) => {
                     e.stopPropagation();
                   }}
@@ -277,17 +286,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 110,
   },
-  headway: {
-    fontSize: 50,
-    fontStyle: "italic",
-    // fontFamily: "sans-serif",
-    color: "white",
-    fontSize: 35,
-    fontWeight: "bold",
-    textShadowColor: Colors.darkPurple,
-    textShadowRadius: 4,
-    textShadowOffset: { width: 4, height: 4 },
-  },
   flexBetween: {
     backgroundColor: Colors.purple,
     alignItems: "center",
@@ -296,22 +294,34 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     paddingLeft: 30,
     paddingTop: 20,
-    height: 180,
+    height: 100,
   },
   loader: {
     position: "absolute",
-    // left: 0,
     right: 0,
     height: 60,
     width: 60,
     textAlign: "center",
   },
   tracingButton: {
-    paddingTop: 3,
-    paddingLeft: 5,
+    paddingTop: 2,
+    paddingLeft: 4,
     borderWidth: 2,
     borderColor: "white",
     borderRadius: 30,
+    position: "absolute",
+    bottom: 10,
+    right: 30,
+  },
+  stopButton: {
+    paddingTop: 2,
+    paddingLeft: 4,
+    borderWidth: 2,
+    borderColor: "white",
+    borderRadius: 30,
+    position: "absolute",
+    right: 110,
+    bottom: 10,
   },
   map: {
     flex: 1,

@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     fontSize: 20,
     letterSpacing: 3,
-    fontWeight: '700',
+    // fontWeight: '700',
   },
   name: {
     marginLeft: 30,
