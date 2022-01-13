@@ -152,7 +152,9 @@ export default function MyMap({ navigation }) {
           )}
           {!track ? (
             <>
-              <Text style={{color: "white", fontSize: 20, letterSpacing:2,}}>MAP</Text>
+              <Text style={{ color: "white", fontSize: 20, letterSpacing: 2 }}>
+                MAP
+              </Text>
               <MaterialCommunityIcons
                 name="play"
                 color={"white"}
@@ -182,7 +184,7 @@ export default function MyMap({ navigation }) {
                   name="plus"
                   color={"white"}
                   size={50}
-                  style={styles.stopButton}
+                  style={styles.saveButton}
                   onTouchEnd={(e) => {
                     e.stopPropagation();
                   }}
@@ -244,7 +246,7 @@ export default function MyMap({ navigation }) {
               case "Sewage Issue":
                 markerColor = "orange";
                 break;
-              case "Pathole Issue":
+              case "Pothole Issue":
                 markerColor = "indigo";
                 break;
               case "Garbage Issue":
@@ -304,21 +306,23 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   tracingButton: {
-    paddingTop: 2,
-    paddingLeft: 4,
+    paddingTop: Platform.OS === "ios" ? 2 : 2,
+
+    paddingLeft: Platform.OS === "ios" ? 2 : 4,
+
     borderWidth: 2,
     borderColor: "white",
-    borderRadius: 30,
+    borderRadius: Platform.OS === "ios" ? 28 : 30,
     position: "absolute",
     bottom: 10,
     right: 30,
   },
-  stopButton: {
-    paddingTop: 2,
-    paddingLeft: 4,
+  saveButton: {
+    paddingTop: Platform.OS === "ios" ? 2 : 2,
+    paddingLeft: Platform.OS === "ios" ? 2 : 4,
     borderWidth: 2,
     borderColor: "white",
-    borderRadius: 30,
+    borderRadius: Platform.OS === "ios" ? 28 : 30,
     position: "absolute",
     right: 110,
     bottom: 10,

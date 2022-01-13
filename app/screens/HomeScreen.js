@@ -128,7 +128,7 @@ export default function HomeScreen({ navigation }) {
             ]
       }
     >
-      {loading && <Loader source={require("../assets/giphy.gif")} />}
+      {/* {loading && <Loader source={require("../assets/giphy.gif")} />} */}
       {!loading && feed.length > 0 && (
         <>
           <H3 style={styles.header}>FEED</H3>
@@ -216,7 +216,8 @@ export default function HomeScreen({ navigation }) {
       )}
       {!loading && !feed.length && (
         <View style={{ justifyContent: "center" }}>
-          <Text style={{ color: "white" }}>Fetching complaints</Text>
+          <Loader source={require("../assets/giphy.gif")} />
+          {/* <Text style={{ color: "white" }}>Fetching complaints...</Text> */}
         </View>
       )}
     </Screen>

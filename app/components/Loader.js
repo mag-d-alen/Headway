@@ -1,23 +1,24 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, Dimensions, Image, StyleSheet, View } from "react-native";
+import Colors from "../config/Colors";
 import Screen from "./Screen";
 
 function Loader({ source }) {
-  const translation = useRef(new Animated.Value(300)).current;
-  useEffect(() => {
-    Animated.timing(translation, {
-      toValue: -300,
-      useNativeDriver: true,
-    }).start();
-    // return()=>
-  }, []);
+  // const translation = useRef(new Animated.Value(300)).current;
+  // useEffect(() => {
+  //   Animated.timing(translation, {
+  //     toValue: -300,
+  //     useNativeDriver: true,
+  //   }).start();
+  //   // return()=>
+  // }, []);
   return (
     <View style={styles.container}>
-      <Animated.Image
+      <Image
         style={{
-          height: 60,
-          width: 60,
-          transform: [{ translateX: translation }],
+          height: 400,
+          width: 400,
+          // transform: [{ translateX: translation }],
         }}
         source={source}
       />
@@ -26,7 +27,7 @@ function Loader({ source }) {
 }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#fff",
+    backgroundColor: Colors.purple,
     alignItems: "center",
     justifyContent: "center",
     height: Dimensions.get("window").height,

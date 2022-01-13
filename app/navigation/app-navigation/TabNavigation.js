@@ -18,6 +18,11 @@ const TabNavigation = () => {
       screenOptions={{
         tabBarStyle: {
           paddingBottom: 6,
+          height: 60,
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
         },
       }}
     >

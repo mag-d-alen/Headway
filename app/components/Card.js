@@ -179,7 +179,8 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingRight: 13,
     paddingLeft: 13,
-    borderRadius: 30,
+    overflow: "hidden",
+    borderRadius: 20,
     fontSize: 15,
   },
   remarks: {

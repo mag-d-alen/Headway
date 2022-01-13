@@ -38,7 +38,7 @@ export default function PostComplainScreen({ navigation }) {
   const [anonymous, setAnonymous] = useState(false);
   const [gallery, setGallery] = useState(false);
   const [category, setCategory] = useState([
-    { name: "Patholes", id: 1 },
+    { name: "Potholes", id: 1 },
     { name: "Pavement issue", id: 2 },
     { name: "Sewerage", id: 3 },
     { name: "Garbage", id: 4 },
@@ -158,7 +158,8 @@ export default function PostComplainScreen({ navigation }) {
           <TextInput
             style={styles.message}
             placeholder="Describe the problem..."
-            numberOfLines={4}
+            // numberOfLines={4}
+            multiline={true}
             value={message}
             onChangeText={(e) => setMessage(e)}
           />
@@ -274,7 +275,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
   password: {
-    paddingTop: 9,
+    // paddingTop: 9,
     marginLeft: 20,
     color: Colors.white,
     fontSize: 12,

@@ -105,8 +105,8 @@ export default function WeatherScreen({ navigation }) {
   return (
     <>
       {isLoading ? (
-        <View>
-          <Text>Fetching the weather</Text>
+        <View style={styles.fetching}>
+          <Text style={{ color: "white" }}>Fetching the weather...</Text>
         </View>
       ) : (
         <View style={styles.container}>
@@ -168,6 +168,15 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.purple,
     height: "100%",
     paddingTop: 45,
+    overflow: "scroll",
+  },
+  fetching: {
+    height: "100%",
+    // color: Colors.light,
+    backgroundColor: Colors.purple,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   whiteContainer: {
     backgroundColor: Colors.white,
