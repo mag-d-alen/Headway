@@ -218,6 +218,7 @@ const styles = StyleSheet.create({
   screen: {
     backgroundColor: Colors.white,
     height: "100%",
+    overflow: "scroll",
   },
   container: {
     borderRadius: 20,
