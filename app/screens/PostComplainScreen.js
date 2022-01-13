@@ -217,13 +217,13 @@ const styles = StyleSheet.create({
   screen: {
     backgroundColor: Colors.white,
     height: "100%",
-    overflow: "scroll",
+    // overflow: "scroll",
   },
   container: {
     borderRadius: 20,
     backgroundColor: Colors.white,
     height: "100%",
-    overflow: "scroll",
+    // overflow: "scroll",
   },
   header: {
     color: Colors.black,
