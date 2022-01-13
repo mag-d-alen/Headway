@@ -223,6 +223,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: Colors.white,
     height: "100%",
+    overflow: "scroll",
   },
   header: {
     color: Colors.black,
