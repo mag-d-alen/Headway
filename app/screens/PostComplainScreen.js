@@ -139,7 +139,6 @@ export default function PostComplainScreen({ navigation }) {
           <H3 style={styles.header}>ADD A WARNING</H3>
           <View style={styles.division}></View>
           <Text style={styles.point1}>POINT 1</Text>
-
           <View style={styles.flexBetween}>
             <Text style={styles.problem}>PROBLEM</Text>
             <View>
