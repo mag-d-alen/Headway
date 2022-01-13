@@ -105,13 +105,13 @@ export default function WeatherScreen({ navigation }) {
   return (
     <>
       {isLoading ? (
-        <View style={styles.fetching}>
-          <Text style={{ color: "white" }}>Fetching the weather...</Text>
+        <View>
+          <Text>Fetching the weather</Text>
         </View>
       ) : (
         <View style={styles.container}>
           <View style={styles.flexBetween}>
-            <H3 style={styles.header}>WEATHER</H3>
+            <H3 style={styles.header}>PROFILE</H3>
             <View style={styles.flex}>
               <MaterialCommunityIcons
                 name="map-marker"
@@ -166,24 +166,14 @@ export default function WeatherScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.purple,
-    height: "100%",
     paddingTop: 45,
-    overflow: "scroll",
-  },
-  fetching: {
-    height: "100%",
-    // color: Colors.light,
-    backgroundColor: Colors.purple,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
   whiteContainer: {
     backgroundColor: Colors.white,
     borderRadius: 20,
     width: "100%",
     height: "100%",
-    marginTop: 115,
+    marginTop: 25,
   },
   flexBetween: {
     backgroundColor: Colors.purple,
@@ -199,18 +189,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingRight: 30,
-    paddingTop: 60,
-    height: 60,
+    paddingRight: 60,
   },
   header: {
     color: Colors.white,
     fontSize: 20,
     letterSpacing: 3,
-    // fontWeight: "700",
+    fontWeight: "700",
   },
   image: {
-    marginTop: 35,
+    marginTop: 15,
     width: 200,
     height: 120,
     marginLeft: 10,
@@ -251,6 +239,7 @@ const styles = StyleSheet.create({
   expectedTemp: {
     color: Colors.white,
     fontSize: 17,
+    marginBottom: 10,
   },
   message: {
     margin: 30,
